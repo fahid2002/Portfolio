@@ -1,5 +1,5 @@
 'use client'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { personal } from '@/data/personal'
 
@@ -12,14 +12,7 @@ const links = [
 ]
 
 export default function Navbar({ onTalk }) {
-  const [scrolled,    setScrolled]    = useState(false)
-  const [menuOpen,    setMenuOpen]    = useState(false)
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
-  }, [])
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const handleNav = (href) => {
     setMenuOpen(false)
@@ -32,11 +25,7 @@ export default function Navbar({ onTalk }) {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0,   opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-[800] flex items-center justify-between px-[5vw] py-[1.1rem] transition-all duration-300 ${
-          scrolled
-            ? 'bg-bg/95 backdrop-blur-[20px] border-b border-[var(--border)] shadow-[0_4px_30px_rgba(192,18,43,0.1)]'
-            : 'bg-transparent'
-        }`}
+        className="fixed top-0 left-0 right-0 z-[800] flex items-center justify-between px-[5vw] py-[1.1rem] transition-all duration-300 bg-bg/95 backdrop-blur-[20px] border-b border-[var(--border)] shadow-[0_4px_30px_rgba(192,18,43,0.1)]"
       >
         {/* Logo */}
         <a

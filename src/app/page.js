@@ -1,7 +1,5 @@
 'use client'
 import { useState } from 'react'
-import AosInit       from '@/components/AosInit'
-import Navbar        from '@/components/Navbar'
 import Hero          from '@/components/Hero'
 import MarqueeBar    from '@/components/MarqueeBar'
 import WaveDivider   from '@/components/WaveDivider'
@@ -18,9 +16,6 @@ export default function HomePage() {
 
   return (
     <>
-      <AosInit />
-      <Navbar onTalk={() => setModalOpen(true)} />
-
       <main>
         <Hero />
         <MarqueeBar />
