@@ -70,7 +70,7 @@ export default function About() {
             data-aos-delay="100"
             className="text-op-text text-[0.88rem] leading-[1.85] mb-4"
           >
-            I&apos;m Fahid Hasan Ifty — a CSE student at Daffodil International University, Dhaka.
+            I&apos;m Fahid Hasan Khan — a CSE student at Daffodil International University, Dhaka.
             My voyage spans the full stack: building powerful Next.js apps, crafting clean APIs
             in Node + Express, managing data in MongoDB &amp; MySQL, and designing pixel-perfect
             UIs in Figma.

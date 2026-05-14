@@ -46,7 +46,7 @@ export default function Navbar({ onTalk }) {
         >
           {personal.logo.replace('.', '')}
           <span className="text-red-b">.</span>
-          <span className="text-[0.6rem] ml-1 opacity-40">☠</span>
+          <span className="text-[1.5rem] text-red-b ml-1 opacity-70">☠</span>
         </a>
 
         {/* Desktop links */}
@@ -55,7 +55,7 @@ export default function Navbar({ onTalk }) {
             <li key={link.href}>
               <button
                 onClick={() => handleNav(link.href)}
-                className="font-pixel text-[0.42rem] text-op-dim tracking-widest relative group transition-colors duration-300 hover:text-cream"
+                className="font-pixel text-[0.5rem] text-op-dim tracking-widest relative group transition-colors duration-300 hover:text-cream"
               >
                 {link.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-red group-hover:w-full transition-all duration-300" />
@@ -66,7 +66,7 @@ export default function Navbar({ onTalk }) {
 
         {/* Let's Talk + Hamburger */}
         <div className="flex items-center gap-4">
-          <button className="nav-talk hidden md:block" onClick={onTalk}>
+          <button className="nav-talk hidden md:block text-[0.5rem]" onClick={onTalk}>
             Let&apos;s Talk ✦
           </button>
 
@@ -104,7 +104,7 @@ export default function Navbar({ onTalk }) {
                 </li>
               ))}
               <li>
-                <button className="nav-talk mt-2" onClick={() => { setMenuOpen(false); onTalk() }}>
+                <button className="nav-talk mt-2 text-[0.5rem]" onClick={() => { setMenuOpen(false); onTalk() }}>
                   Let&apos;s Talk ✦
                 </button>
               </li>

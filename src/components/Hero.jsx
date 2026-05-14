@@ -88,9 +88,13 @@ export default function Hero() {
             )}
           </div>
           <div className="wanted-foot">
-            <div className="wanted-foot-name">{personal.fullName.toUpperCase()}</div>
-            <div className="wanted-foot-bounty">BOUNTY: ∞ BERRY</div>
-          </div>
+            <div className="font-pixel text-[0.7rem] tracking-[0.2em] mb-2">
+              DEAD OR ALIVE
+            </div>
+  
+              <div className="wanted-foot-name !text-[1.5rem]">{personal.fullName.toUpperCase()}</div>
+              <div className="wanted-foot-bounty !text-[0.38rem] mt-2">BOUNTY: 3,000,000,000 BERRY</div>
+            </div>
         </div>
 
         {/* Location badge */}
@@ -102,7 +106,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* RIGHT — INFO */}
+      {/* RIGHT INFO */}
       <div className="z-10">
 
         {/* Available badge */}
@@ -124,7 +128,7 @@ export default function Hero() {
         </h1>
 
         {/* Designation */}
-        <p className="gs-desg font-pixel text-[0.38rem] text-op-dim tracking-[0.1em] leading-[2.4] mb-5">
+        <p className="gs-desg font-pixel text-[0.42rem] text-op-dim tracking-[0.1em] leading-[2.4] mb-5 ">
           Software Engineer <span className="text-red mx-1">|</span> MERN Stack Developer<br />
           Graphics Designer <span className="text-red mx-1">|</span> UI / UX Designer
         </p>
