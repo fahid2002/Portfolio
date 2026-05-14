@@ -39,7 +39,8 @@ export default function Contact() {
       await emailjs.sendForm(SVC, TPL, formRef.current, KEY)
       setStatus('sent')
       setForm({ name: '', email: '', subject: '', message: '' })
-    } catch {
+    } catch (error){
+      console.error('EmailJS Error:', error)
       setStatus('error')
     }
   }
@@ -72,7 +73,7 @@ export default function Contact() {
                   <Icon size={16} />
                 </div>
                 <div>
-                  <div className="font-pixel text-[0.33rem] text-op-dim tracking-widest mb-1">{label}</div>
+                  <div className="font-pixel text-[0.5rem] text-op-dim tracking-widest mb-1">{label}</div>
                   <div className="text-op-text text-[0.87rem]">{value}</div>
                 </div>
               </div>
@@ -92,10 +93,10 @@ export default function Contact() {
             )
           })}
 
-          <div className="font-pixel text-[0.4rem] text-accent tracking-widest mt-7 mb-4">
+          <div className="font-pixel text-[0.5rem] text-accent tracking-widest mt-7 mb-4">
             Find Me Online ✦
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 ">
             {socials.map(({ Icon, label, href }) => (
               <a
                 key={label}
@@ -119,32 +120,32 @@ export default function Contact() {
           data-aos="fade-left"
         >
           <div className="font-display text-cream text-[2.2rem]">Send a Message</div>
-          <p className="text-op-dim text-[0.82rem] leading-[1.7] -mt-2">
-            Have a project in mind or want to collaborate? Drop me a message —
+          <p className="text-op-dim text-[0.9rem] leading-[1.7] -mt-2">
+            Have a project in mind or want to collaborate? Drop me a message -
             I&apos;ll get back to you as soon as the wind allows.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="flex flex-col gap-2">
-              <label className="font-pixel text-[0.33rem] text-op-dim tracking-widest">Your Name</label>
+              <label className="font-pixel text-[0.5rem] text-op-dim tracking-widest">Your Name</label>
               <input name="name" value={form.name} onChange={onChange} required
-                placeholder="Rahim Ahmed" className="cf-input" />
+                placeholder="Fahid Hasan" className="cf-input" />
             </div>
             <div className="flex flex-col gap-2">
-              <label className="font-pixel text-[0.33rem] text-op-dim tracking-widest">Your Email</label>
+              <label className="font-pixel text-[0.5rem] text-op-dim tracking-widest">Your Email</label>
               <input type="email" name="email" value={form.email} onChange={onChange} required
-                placeholder="rahim@email.com" className="cf-input" />
+                placeholder="fahid@email.com" className="cf-input" />
             </div>
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="font-pixel text-[0.33rem] text-op-dim tracking-widest">Subject</label>
+            <label className="font-pixel text-[0.5rem] text-op-dim tracking-widest">Subject</label>
             <input name="subject" value={form.subject} onChange={onChange} required
               placeholder="Project Inquiry / Collaboration" className="cf-input" />
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="font-pixel text-[0.33rem] text-op-dim tracking-widest">Message</label>
+            <label className="font-pixel text-[0.5rem] text-op-dim tracking-widest">Message</label>
             <textarea name="message" value={form.message} onChange={onChange} required
               rows={5} placeholder="Tell me about your project or idea..."
               className="cf-textarea resize-y" />

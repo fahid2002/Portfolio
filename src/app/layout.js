@@ -25,15 +25,15 @@ const bebasNeue = Bebas_Neue({
 export const metadata = {
   title: 'Fahid Hasan | MERN Stack Developer & Designer',
   description:
-    'Portfolio of Fahid Hasan Khan — MERN Stack Developer, Software Engineer, UI/UX Designer & Graphics Designer from Dhaka, Bangladesh.',
+    'Portfolio of Fahid Hasan Khan - MERN Stack Developer, Software Engineer, UI/UX Designer & Graphics Designer from Dhaka, Bangladesh.',
   keywords: [
     'Fahid Hasan', 'MERN Stack', 'Next.js', 'React', 'Node.js', 'MongoDB',
     'UI UX Designer', 'Graphics Designer', 'Bangladesh Developer',
   ],
   authors: [{ name: 'Fahid Hasan Khan' }],
   openGraph: {
-    title: 'Fahid Hasan — MERN Stack Developer & Designer',
-    description: 'Portfolio of Fahid Hasan Khan — MERN Stack Developer & Designer from Dhaka, Bangladesh.',
+    title: 'Fahid Hasan - MERN Stack Developer & Designer',
+    description: 'Portfolio of Fahid Hasan Khan - MERN Stack Developer & Designer from Dhaka, Bangladesh.',
     type: 'website',
   },
 }

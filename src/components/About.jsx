@@ -52,7 +52,7 @@ export default function About() {
         <div className="eyebrow-line" />
       </div>
 
-      {/* ── Two-column grid: left = text, right = quote ── */}
+      {/* Two-column grid: left = text, right = quote */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 items-center">
 
         {/* LEFT — Captain's Log text */}
@@ -70,7 +70,7 @@ export default function About() {
             data-aos-delay="100"
             className="text-op-text text-[0.88rem] leading-[1.85] mb-4"
           >
-            I&apos;m Fahid Hasan Khan — a CSE student at Daffodil International University, Dhaka.
+            I&apos;m Fahid Hasan Khan - a CSE student at Daffodil International University, Dhaka.
             My voyage spans the mern stack: building powerful Next.js apps, crafting clean APIs
             in Node + Express, managing data in MongoDB, and designing perfect
             UIs in Figma.
@@ -82,7 +82,7 @@ export default function About() {
             className="text-op-text text-[0.88rem] leading-[1.85]"
           >
             When I&apos;m not writing code, I&apos;m designing posters, creating visual experiences,
-            and building products for real businesses — like the Twilight Thread crochet brand and
+            and building products for real businesses - like the Twilight Thread crochet brand and
             TileHaus, a mern-stack tile gallery live on Vercel.
           </p>
 

@@ -23,7 +23,7 @@ export default function Footer() {
             <a
               key={link.href}
               href={link.href}
-              className="font-pixel text-[0.36rem] text-op-dim tracking-widest transition-colors duration-300 hover:text-red"
+              className="font-pixel text-[0.5rem] text-op-dim tracking-widest transition-colors duration-300 hover:text-red"
             >
               {link.label}
             </a>
@@ -32,10 +32,10 @@ export default function Footer() {
       </div>
 
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
-        <span className="font-pixel text-[0.3rem] text-op-dim tracking-widest">
+        <span className="font-pixel text-[0.5rem] text-op-dim tracking-widest">
           © {year} {personal.fullName} · All Rights Reserved
         </span>
-        <span className="font-pixel text-[0.3rem] text-op-dim tracking-widest">
+        <span className="font-pixel text-[0.5rem] text-op-dim tracking-widest">
           Built by <span className="text-red">Fahid Hasan</span> · MERN Stack Developer &amp; Designer
         </span>
       </div>

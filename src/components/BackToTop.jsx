@@ -23,9 +23,9 @@ export default function BackToTop() {
           transition={{ duration: 0.3 }}
           onClick={scrollTop}
           aria-label="Back to top"
-          className="fixed bottom-8 right-8 z-[700] w-12 h-12 bg-red text-cream flex items-center justify-center font-pixel text-[0.9rem]"
-          style={{ boxShadow: '4px 4px 0 #6a000e' }}
-          whileHover={{ x: -2, y: -2, boxShadow: '6px 6px 0 #6a000e' }}
+          className="fixed bottom-8 right-8 z-[700] w-10 h-10 bg-red text-cream flex items-center justify-center font-pixel text-[0.9rem]"
+          style={{ boxShadow: '3px 3px 0 #6a000e' }}
+          whileHover={{ x: -2, y: -2, boxShadow: '5px 5px 0 #6a000e' }}
           whileTap={{ scale: 0.95 }}
         >
           ↑

@@ -118,7 +118,7 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar        { width: 3px; }
+::-webkit-scrollbar        { width: 10px; }
 ::-webkit-scrollbar-track  { background: var(--bg); }
 ::-webkit-scrollbar-thumb  { background: var(--red); }
 ::selection                { background: var(--red); color: var(--cream); }
