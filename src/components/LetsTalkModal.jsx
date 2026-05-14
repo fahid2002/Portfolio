@@ -52,7 +52,7 @@ export default function LetsTalkModal({ open, onClose }) {
             key="modal-box"
             initial={{ opacity: 0, y: 30, scale: 0.96 }}
             animate={{ opacity: 1, y: 0,  scale: 1    }}
-            exit={{ opacity: 0, y: 20, scale: 0.96 }}
+            exit={{ opacity: 0, y: 20, scale: 0.96    }}
             transition={{ duration: 0.35, ease: 'easeOut' }}
             className="modal-corners relative bg-bg3 border border-[var(--border-b)] w-full max-w-[460px] p-10"
             style={{ boxShadow: '0 0 80px rgba(192,18,43,0.22)' }}

@@ -1,9 +1,6 @@
 import { DM_Sans, Press_Start_2P, Bebas_Neue } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/Navbar'
-import AosInit from '@/components/AosInit'
 
-// 1. Configure Fonts to match your One Piece mockup
 const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-body',
@@ -11,7 +8,7 @@ const dmSans = DM_Sans({
   display: 'swap',
 })
 
-const pressStart = Press_Start_2P({
+const pressStart2P = Press_Start_2P({
   subsets: ['latin'],
   variable: '--font-pixel',
   weight: '400',
@@ -25,40 +22,29 @@ const bebasNeue = Bebas_Neue({
   display: 'swap',
 })
 
-// 2. SEO Metadata
 export const metadata = {
-  title: 'fahid. — MERN Stack Developer & Designer',
-  description: 'Portfolio of Fahid Hasan Khan — MERN Stack Developer, Software Engineer, UI/UX Designer & Graphics Designer from Dhaka, Bangladesh.',
+  title: 'Fahid Hasan — MERN Stack Developer & Designer',
+  description:
+    'Portfolio of Fahid Hasan Ifty — MERN Stack Developer, Software Engineer, UI/UX Designer & Graphics Designer from Dhaka, Bangladesh.',
   keywords: [
-    'Fahid Hasan', 'MERN Stack', 'Next.js', 'React', 'One Piece Portfolio',
+    'Fahid Hasan', 'MERN Stack', 'Next.js', 'React', 'Node.js', 'MongoDB',
     'UI UX Designer', 'Graphics Designer', 'Bangladesh Developer',
   ],
-  authors: [{ name: 'Fahid Hasan Khan' }],
-  icons: {
-    icon: '/favicon.svg',
+  authors: [{ name: 'Fahid Hasan Ifty' }],
+  openGraph: {
+    title: 'Fahid Hasan — MERN Stack Developer & Designer',
+    description: 'Portfolio of Fahid Hasan Ifty — MERN Stack Developer & Designer from Dhaka, Bangladesh.',
+    type: 'website',
   },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html 
-      lang="en" 
-      className={`${dmSans.variable} ${pressStart.variable} ${bebasNeue.variable} scroll-smooth`}
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${pressStart2P.variable} ${bebasNeue.variable}`}
     >
-      <body className="bg-bg text-text font-body selection:bg-red-b selection:text-cream antialiased">
-        {/* AosInit: This is the client component that starts your scroll animations.
-          If you haven't created this file yet, create it at src/components/AosInit.jsx
-        */}
-        <AosInit />
-        <Navbar />
-
-        <div className="min-h-screen relative overflow-hidden">
-          {children}
-        </div>
-
-        {/* Global Grainy Overlay (Optional - based on your mockup vibe) */}
-        <div className="fixed inset-0 pointer-events-none z-[9999] opacity-[0.03] bg-noise" />
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

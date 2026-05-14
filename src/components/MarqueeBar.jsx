@@ -2,6 +2,7 @@
 import { marqueeItems } from '@/libs/utils'
 
 export default function MarqueeBar() {
+
   const items = [...marqueeItems, ...marqueeItems]
 
   return (

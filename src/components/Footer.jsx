@@ -30,6 +30,7 @@ export default function Footer() {
           ))}
         </nav>
       </div>
+
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
         <span className="font-pixel text-[0.3rem] text-op-dim tracking-widest">
           © {year} {personal.fullName} · All Rights Reserved

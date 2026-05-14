@@ -1,18 +1,25 @@
 'use client'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { personal } from '@/data/personal'
 
 const links = [
-  { label: 'Home',    href: '#home' },
-  { label: 'About',   href: '#about' },
-  { label: 'Skills',  href: '#skills' },
-  { label: 'Projects',href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home',     href: '#home'     },
+  { label: 'About',    href: '#about'    },
+  { label: 'Skills',   href: '#skills'   },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Contact',  href: '#contact'  },
 ]
 
 export default function Navbar({ onTalk }) {
+  const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
 
   const handleNav = (href) => {
     setMenuOpen(false)
@@ -25,7 +32,11 @@ export default function Navbar({ onTalk }) {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0,   opacity: 1 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className="fixed top-0 left-0 right-0 z-[800] flex items-center justify-between px-[5vw] py-[1.1rem] transition-all duration-300 bg-bg/95 backdrop-blur-[20px] border-b border-[var(--border)] shadow-[0_4px_30px_rgba(192,18,43,0.1)]"
+        className={`fixed top-0 left-0 right-0 z-[800] flex items-center justify-between px-[5vw] py-[1.1rem] transition-all duration-300 ${
+          scrolled
+            ? 'bg-bg/95 backdrop-blur-[20px] border-b border-[var(--border)] shadow-[0_4px_30px_rgba(192,18,43,0.1)]'
+            : 'bg-bg/80 backdrop-blur-[10px] border-b border-[var(--border)]'
+        }`}
       >
         {/* Logo */}
         <a
@@ -33,7 +44,8 @@ export default function Navbar({ onTalk }) {
           onClick={e => { e.preventDefault(); handleNav('#home') }}
           className="font-display text-[2.1rem] text-cream leading-none hover:opacity-90 transition-opacity"
         >
-          {personal.logo.replace('.', '')}<span className="text-red-b">.</span>
+          {personal.logo.replace('.', '')}
+          <span className="text-red-b">.</span>
           <span className="text-[0.6rem] ml-1 opacity-40">☠</span>
         </a>
 
@@ -52,13 +64,12 @@ export default function Navbar({ onTalk }) {
           ))}
         </ul>
 
-        {/* Let's Talk + Mobile toggle */}
+        {/* Let's Talk + Hamburger */}
         <div className="flex items-center gap-4">
           <button className="nav-talk hidden md:block" onClick={onTalk}>
             Let&apos;s Talk ✦
           </button>
 
-          {/* Hamburger */}
           <button
             className="md:hidden flex flex-col gap-[5px] p-2"
             onClick={() => setMenuOpen(v => !v)}
@@ -76,8 +87,8 @@ export default function Navbar({ onTalk }) {
         {menuOpen && (
           <motion.div
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0  }}
+            exit={{ opacity: 0, y: -20   }}
             transition={{ duration: 0.3 }}
             className="fixed top-[62px] left-0 right-0 z-[799] bg-bg2/98 backdrop-blur-[20px] border-b border-[var(--border)] px-[5vw] py-6 md:hidden"
           >
