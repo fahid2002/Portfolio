@@ -28,7 +28,7 @@ export default function Skills() {
       {/* Layout: sidebar + content */}
       <div className="flex flex-col md:flex-row gap-10 md:gap-14">
 
-        {/* ── Sidebar nav ── */}
+        {/* Sidebar nav */}
         <aside className="md:w-[180px] flex-shrink-0 md:sticky md:top-28 self-start">
           <ul className="list-none flex flex-row md:flex-col overflow-x-auto md:overflow-visible gap-0 pb-2 md:pb-0">
             {skillGroups.map(g => (
@@ -36,7 +36,7 @@ export default function Skills() {
                 <button
                   onClick={() => setActive(g.id)}
                   className={`
-                    font-pixel text-[0.37rem] tracking-widest px-3 py-[0.75rem]
+                    flex items-center font-pixel text-[0.55rem] tracking-widest px-3 py-[0.75rem]
                     w-full text-left whitespace-nowrap transition-all duration-300
                     border-b-2 md:border-b-0 md:border-l-2
                     ${active === g.id
@@ -47,7 +47,8 @@ export default function Skills() {
                     }
                   `}
                 >
-                  <span className="mr-1">{g.icon}</span> {g.label}
+                  <span className="text-[0.7rem] font-sans mr-2 leading-none">{g.icon}</span> 
+                  <span className="leading-none mt-[2px]">{g.label}</span>
                 </button>
               </li>
             ))}
@@ -65,11 +66,11 @@ export default function Skills() {
               <div className="flex items-center gap-3 mb-4 pb-3 border-b border-[var(--border)]">
                 <span
                   className="font-display text-[2rem] leading-none"
-                  style={{ color: 'rgba(192,18,43,0.22)' }}
+                  style={{ color: 'rgb(150 20 47)' }}
                 >
                   {g.num}
                 </span>
-                <span className={`font-display text-[1.5rem] tracking-[0.04em] ${g.accent ? 'text-accent' : 'text-cream'}`}>
+                <span className={`font-display text-[1.7rem] tracking-[0.04em] ${g.accent ? 'text-accent' : 'text-cream'}`}>
                   {g.label}
                 </span>
               </div>
@@ -84,7 +85,7 @@ export default function Skills() {
                     whileInView="visible"
                     viewport={{ once: true }}
                     variants={tagVar}
-                    className={`sk-tag ${g.accent ? 'sk-tag-acc' : ''}`}
+                    className={`sk-tag ${g.accent ? 'sk-tag-acc' : ''} text-[0.75rem] md:text-[0.5rem] px-4 py-[0.6rem]`}
                   >
                     {skill}
                   </motion.span>

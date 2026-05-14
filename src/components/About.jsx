@@ -71,8 +71,8 @@ export default function About() {
             className="text-op-text text-[0.88rem] leading-[1.85] mb-4"
           >
             I&apos;m Fahid Hasan Khan — a CSE student at Daffodil International University, Dhaka.
-            My voyage spans the full stack: building powerful Next.js apps, crafting clean APIs
-            in Node + Express, managing data in MongoDB &amp; MySQL, and designing pixel-perfect
+            My voyage spans the mern stack: building powerful Next.js apps, crafting clean APIs
+            in Node + Express, managing data in MongoDB, and designing perfect
             UIs in Figma.
           </p>
 
@@ -101,7 +101,7 @@ export default function About() {
                 <div className="font-display text-red-b text-[2.6rem] leading-none">
                   <CountUp target={s.n} suffix={s.s} />
                 </div>
-                <div className="font-pixel text-[0.32rem] text-op-dim tracking-widest mt-1">
+                <div className="font-pixel text-[0.5rem] text-op-dim tracking-widest mt-1">
                   {s.label}
                 </div>
               </div>
@@ -112,7 +112,14 @@ export default function About() {
         {/* RIGHT — Quote + chips */}
         <div data-aos="fade-left">
           <motion.div
-            animate={{ y: [0, -10, 0] }}
+            animate={{ 
+              y: [0, -10, 0],
+              boxShadow: [
+                '0px 4px 15px rgba(192, 18, 43, 0.1)',
+                '0px 20px 35px rgba(192, 18, 43, 0.35)',
+                '0px 4px 15px rgba(192, 18, 43, 0.1)'
+              ]
+            }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
             className="bg-bg3 p-10 relative"
             style={{ border: '1px solid var(--border)', borderLeft: '4px solid var(--red)' }}

@@ -9,7 +9,7 @@ export const projectCategories = [
         name: 'TileHaus',
         stack: 'Next.js · MongoDB · Better Auth · Google OAuth · Vercel',
         desc: 'Premium tile gallery for architects, designers & homeowners. Secure auth (Email/Password + Google OAuth), user profile management, dynamic MongoDB rendering, and Swiper carousel.',
-        image: '/images/tilehaus.svg',
+        image: '/image/tilehaus.png',
         live: 'https://tile-haus.vercel.app',
         github: 'https://github.com/fahid2002/TileHaus',
       },

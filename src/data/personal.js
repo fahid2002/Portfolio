@@ -9,7 +9,7 @@ export const personal = {
     'Graphics Designer',
     'UI/UX Designer',
   ],
-  bio: "A CSE undergraduate at Daffodil International University - sailing the Grand Line of mern-stack development. I build fast, beautiful web apps with React & Next.js, design perfect interfaces in Figma, and craft experiences users never forget.",
+  bio: "A CSE undergraduate at Daffodil International University - sailing the Grand Line of mern-stack development. I build fast, beautiful web apps with React & Next.js, design perfect interfaces in Figma.",
   location:     'Dhaka, Bangladesh',
   email:        'fahidhasanifty20@gmail.com',
   phone:        '+88 01749573951',
