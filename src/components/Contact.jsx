@@ -12,7 +12,7 @@ const KEY = 'lBxVNHzTLuf-OpVjJ'
 const infoItems = [
   { Icon: FiPhone,    label: 'Phone',    value: personal.phone,    href: `tel:${personal.phone}`,     cls: 'text-red bg-[rgba(192,18,43,0.12)]'     },
   { Icon: FaWhatsapp, label: 'WhatsApp', value: personal.phone,    href: personal.whatsapp,            cls: 'text-[#25d366] bg-[rgba(37,211,102,0.1)]' },
-  { Icon: FiMail,     label: 'Email',    value: personal.email,    href: `mailto:${personal.email}`,  cls: 'text-red bg-[rgba(192,18,43,0.12)]'     },
+  { Icon: FiMail,     label: 'Email',    value: personal.email,    href: `https://mail.google.com/mail/?view=cm&fs=1&to=${personal.email}`,  cls: 'text-red bg-[rgba(192,18,43,0.12)]'     },
   { Icon: FiMapPin,   label: 'Location', value: personal.location, href: null,                        cls: 'text-red bg-[rgba(192,18,43,0.12)]'     },
 ]
 

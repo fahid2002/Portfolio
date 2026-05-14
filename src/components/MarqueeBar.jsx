@@ -11,7 +11,7 @@ export default function MarqueeBar() {
         {items.map((item, i) => (
           <div
             key={i}
-            className="flex items-center gap-5 px-8 font-pixel text-[0.38rem] text-op-dim whitespace-nowrap tracking-widest"
+            className="flex items-center gap-5 px-8 font-pixel text-[0.5rem] text-op-dim whitespace-nowrap tracking-widest"
           >
             <span>{item}</span>
             <span className="w-[5px] h-[5px] bg-red flex-shrink-0" />

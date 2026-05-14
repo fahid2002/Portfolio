@@ -83,7 +83,7 @@ export default function About() {
           >
             When I&apos;m not writing code, I&apos;m designing posters, creating visual experiences,
             and building products for real businesses — like the Twilight Thread crochet brand and
-            TileHaus, a full-stack tile gallery live on Vercel.
+            TileHaus, a mern-stack tile gallery live on Vercel.
           </p>
 
           {/* Stats */}
@@ -111,34 +111,45 @@ export default function About() {
 
         {/* RIGHT — Quote + chips */}
         <div data-aos="fade-left">
-          <div
-            className="bg-bg3 p-8 relative"
-            style={{ border: '1px solid var(--border)', borderLeft: '3px solid var(--red)' }}
+          <motion.div
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="bg-bg3 p-10 relative"
+            style={{ border: '1px solid var(--border)', borderLeft: '4px solid var(--red)' }}
           >
             <div
-              className="absolute left-0 top-0 w-[3px] h-full pointer-events-none"
+              className="absolute left-0 top-0 w-[4px] h-full pointer-events-none"
               style={{ background: 'linear-gradient(to bottom, var(--red), transparent)' }}
             />
-            <blockquote className="font-display text-cream text-[1.6rem] leading-[1.3] mb-3">
-              &ldquo;People&apos;s dreams never end.<br />That&apos;s why I keep building.&rdquo;
+            
+            <blockquote className="font-display text-cream text-[2rem] leading-[1.2] mb-4">
+              &ldquo;If you don&apos;t take risks,<br />you can&apos;t create a future.&rdquo;
             </blockquote>
-            <cite className="font-pixel text-[0.33rem] text-red not-italic tracking-widest">
-              — Inspired by the Grand Line Philosophy
+            
+            <cite className="font-pixel text-[0.45rem] text-red not-italic tracking-widest">
+              — Monkey D. Luffy, <span className="text-op-dim">One Piece</span> 
             </cite>
 
-            <div className="flex flex-wrap gap-2 mt-7">
-              {chips.map(chip => (
-                <motion.span
-                  key={chip}
-                  whileHover={{ borderColor: 'var(--red)', color: 'var(--cream)' }}
-                  className="font-pixel text-[0.32rem] px-3 py-[0.4rem] border text-op-dim tracking-widest cursor-default transition-colors duration-300"
-                  style={{ borderColor: 'var(--border)' }}
-                >
-                  {chip}
-                </motion.span>
-              ))}
+            <div className="flex flex-wrap gap-3 mt-10">
+              {chips.map(chip => {
+                const firstSpaceIndex = chip.indexOf(' ')
+                const icon = chip.substring(0, firstSpaceIndex)
+                const text = chip.substring(firstSpaceIndex + 1)
+
+                return (
+                  <motion.span
+                    key={chip}
+                    whileHover={{ borderColor: 'var(--red)', color: 'var(--cream)' }}
+                    className="flex items-center font-pixel text-[0.42rem] px-4 py-[0.6rem] border text-op-dim tracking-widest cursor-default transition-colors duration-300"
+                    style={{ borderColor: 'var(--border)' }}
+                  >
+                    <span className="text-[0.85rem] font-sans mr-2 leading-none">{icon}</span>
+                    <span className="leading-none mt-[2px]">{text}</span>
+                  </motion.span>
+                )
+              })}
             </div>
-          </div>
+          </motion.div>
         </div>
 
       </div>
