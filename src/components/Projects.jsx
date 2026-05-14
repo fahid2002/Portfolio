@@ -6,7 +6,7 @@ import { projectCategories } from '@/data/projects'
 function ProjectCard({ project, i }) {
   return (
     <motion.div
-      className="pj-card group"
+      className="pj-card group rounded-xl overflow-hidden flex flex-col h-full"
       initial={{ opacity: 0, y: 25 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -35,13 +35,13 @@ function ProjectCard({ project, i }) {
       </div>
 
       {/* Body */}
-      <div className="p-5">
+      <div className="p-5 flex flex-col flex-grow">
         <h3 className="font-display text-[1.4rem] text-cream mb-1">{project.name}</h3>
         <p className="font-pixel text-[0.33rem] text-red tracking-widest mb-3 leading-[1.9]">
           {project.stack}
         </p>
         <p className="text-op-text text-[0.82rem] leading-[1.65] mb-4">{project.desc}</p>
-        <div className="flex gap-3 flex-wrap">
+        <div className="flex gap-3 flex-wrap mt-auto pt-2">
           {project.live && (
             <a
               href={project.live}
@@ -72,7 +72,7 @@ function ProjectCard({ project, i }) {
 function FigmaCard({ design, i }) {
   return (
     <motion.div
-      className="figma-ph"
+      className="figma-ph rounded-xl overflow-hidden"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -136,7 +136,7 @@ export default function Projects() {
           </div>
 
           {/* Project Grid — column boxes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {cat.isFigma
               ? cat.designs.map((d, i) => <FigmaCard key={d.id} design={d} i={i} />)
               : cat.projects.map((p, i) => <ProjectCard key={p.id} project={p} i={i} />)
