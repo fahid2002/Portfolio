@@ -5,10 +5,9 @@ import { FiPhone, FiMail, FiMapPin, FiSend } from 'react-icons/fi'
 import { FaWhatsapp, FaGithub, FaLinkedin, FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa'
 import { personal } from '@/data/personal'
 
-/* 🔴 Replace with your EmailJS credentials from emailjs.com */
-const SVC = 'YOUR_SERVICE_ID'
-const TPL = 'YOUR_TEMPLATE_ID'
-const KEY = 'YOUR_PUBLIC_KEY'
+const SVC = 'portfolio_contact'
+const TPL = 'template_iaahw7s'
+const KEY = 'lBxVNHzTLuf-OpVjJ'
 
 const infoItems = [
   { Icon: FiPhone,    label: 'Phone',    value: personal.phone,    href: `tel:${personal.phone}`,     cls: 'text-red bg-[rgba(192,18,43,0.12)]'     },

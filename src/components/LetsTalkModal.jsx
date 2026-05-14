@@ -24,7 +24,7 @@ const contacts = [
     iconClass: 'text-red bg-[rgba(192,18,43,0.12)]',
     label: 'EMAIL',
     value: personal.email,
-    href: `mailto:${personal.email}`,
+    href: `https://mail.google.com/mail/?view=cm&fs=1&to=${personal.email}`,
   },
   {
     icon: FaLinkedin,
@@ -78,8 +78,8 @@ export default function LetsTalkModal({ open, onClose }) {
                 <motion.a
                   key={label}
                   href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target={href.startsWith('http') ? '_blank' : '_self'}
+                  rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   whileHover={{ x: 4 }}
                   className="flex items-center gap-4 p-4 bg-bg2 border border-[var(--border)] transition-colors duration-300 hover:border-red hover:bg-[rgba(192,18,43,0.05)]"
                 >

@@ -25,7 +25,7 @@ export const personal = {
   //socials
   socials: {
     github:    'https://github.com/fahid2002', 
-    linkedin:  'www.linkedin.com/in/fahid-hasan-280425382', 
+    linkedin:  'https://www.linkedin.com/in/fahid-hasan-280425382/', 
     facebook:  'https://www.facebook.com/fh.ifty.1',
     twitter:   'https://x.com/fh_ifty',    
     instagram: 'https://www.instagram.com/fahidhasankhanifty/', 
