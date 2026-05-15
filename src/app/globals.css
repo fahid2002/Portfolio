@@ -456,6 +456,3 @@ body::before {
 }
 .modal-corners::before { top: 0; left: 0; border-top: 2px solid var(--accent); border-left: 2px solid var(--accent); }
 .modal-corners::after  { bottom: 0; right: 0; border-bottom: 2px solid var(--accent); border-right: 2px solid var(--accent); }
-* {
-  border: 1px solid red !important;
-}
