@@ -77,7 +77,7 @@ export default function Preloader() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1 }}
-            className="font-pixel text-[0.4rem] text-op-dim tracking-widest mt-4"
+            className="fixed top-0 left-0 w-screen h-dvh z-[9999] flex flex-col items-center justify-center bg-bg overflow-hidden px-5"
           >
             LOADING ASSETS...
           </motion.div>
