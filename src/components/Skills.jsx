@@ -30,9 +30,9 @@ export default function Skills() {
 
         {/* Sidebar nav */}
         <aside className="md:w-[180px] flex-shrink-0 md:sticky md:top-28 self-start">
-          <ul className="list-none flex flex-row md:flex-col overflow-x-auto md:overflow-visible gap-0 pb-2 md:pb-0">
+          <ul className="list-none flex flex-row md:flex-col overflow-x-auto md:overflow-visible gap-0 pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {skillGroups.map(g => (
-              <li key={g.id}>
+              <li key={g.id} className="shrink-0">
                 <button
                   onClick={() => setActive(g.id)}
                   className={`
