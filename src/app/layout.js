@@ -1,7 +1,6 @@
 import { DM_Sans, Press_Start_2P, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 import Preloader from '@/components/Preloader'
-import Cursor from '@/components/Cursor'
 import Script from 'next/script'
 
 const dmSans = DM_Sans({
@@ -48,17 +47,16 @@ export default function RootLayout({ children }) {
       className={`${dmSans.variable} ${pressStart2P.variable} ${bebasNeue.variable}`}
     >
       <body className="overflow-x-hidden bg-bg">
-        <Preloader />
-        <Cursor />
+       
+          <Preloader />
+          {children}
 
-        {children}
-
-        {/*oneko*/}
+        {/* Script for oneko.js */}
         <Script 
           src="/oneko.js" 
           strategy="lazyOnload" 
         />
-        </body>
+      </body>
     </html>
   )
 }
