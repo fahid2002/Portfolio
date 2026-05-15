@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${dmSans.variable} ${pressStart2P.variable} ${bebasNeue.variable}`}
     >
-      <body>
+      <body className="overflow-x-hidden bg-bg">
         <Preloader />
         {children}
         </body>
