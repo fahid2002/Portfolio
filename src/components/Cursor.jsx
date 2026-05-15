@@ -4,12 +4,21 @@ import { motion, useMotionValue } from 'framer-motion'
 
 export default function Cursor() {
   const [isPointer, setIsPointer] = useState(false)
+  const [isMobile, setIsMobile] = useState(false) 
   
   const mouseX = useMotionValue(-100)
   const mouseY = useMotionValue(-100)
 
   useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.matchMedia("(pointer: coarse)").matches)
+    }
+    
+    checkMobile() 
+
     const handleMouseMove = (e) => {
+      if (window.matchMedia("(pointer: coarse)").matches) return
+
       mouseX.set(e.clientX)
       mouseY.set(e.clientY)
 
@@ -22,20 +31,23 @@ export default function Cursor() {
       setIsPointer(!!isClickable)
     }
 
-    const style = document.createElement("style")
-    style.innerHTML = `
-      * { cursor: none !important; }
-      a, button { cursor: none !important; }
-    `
-    document.head.appendChild(style)
+    if (!window.matchMedia("(pointer: coarse)").matches) {
+      const style = document.createElement("style")
+      style.id = "hide-cursor-style"
+      style.innerHTML = `* { cursor: none !important; } a, button { cursor: none !important; }`
+      document.head.appendChild(style)
+    }
 
     window.addEventListener('mousemove', handleMouseMove)
 
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
-      document.head.removeChild(style)
+      const style = document.getElementById("hide-cursor-style")
+      if (style) document.head.removeChild(style)
     }
   }, [mouseX, mouseY])
+
+  if (isMobile) return null
 
   return (
     <motion.div
@@ -43,26 +55,21 @@ export default function Cursor() {
       style={{ 
         x: mouseX, 
         y: mouseY,
-        
         translateX: "-5%", 
         translateY: "-5%" 
       }}
     >
-      {/* 1. NORMAL CURSOR IMAGE */}
-      {!isPointer && (
+      {!isPointer ? (
         <img
           src="/image/LuffyArrow.png"
           alt="Luffy Normal"
-          className="w-[40px] h-auto transition-opacity duration-75"
+          className="w-[40px] h-auto"
         />
-      )}
-
-      {/* 2. HOVER/POINTER IMAGE */}
-      {isPointer && (
+      ) : (
         <img
           src="/image/luffypointer.png" 
           alt="Luffy Pointer"
-          className="w-[40px] h-auto transition-opacity duration-75"
+          className="w-[40px] h-auto"
         />
       )}
     </motion.div>
