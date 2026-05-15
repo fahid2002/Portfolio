@@ -1,6 +1,7 @@
 import { DM_Sans, Press_Start_2P, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 import Preloader from '@/components/Preloader'
+import Cursor from '@/components/Cursor'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -47,6 +48,8 @@ export default function RootLayout({ children }) {
     >
       <body className="overflow-x-hidden bg-bg">
         <Preloader />
+        <Cursor />
+
         {children}
         </body>
     </html>
