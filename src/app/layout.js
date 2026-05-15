@@ -2,6 +2,7 @@ import { DM_Sans, Press_Start_2P, Bebas_Neue } from 'next/font/google'
 import './globals.css'
 import Preloader from '@/components/Preloader'
 import Cursor from '@/components/Cursor'
+import Script from 'next/script'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -51,6 +52,12 @@ export default function RootLayout({ children }) {
         <Cursor />
 
         {children}
+
+        {/*oneko*/}
+        <Script 
+          src="/oneko.js" 
+          strategy="lazyOnload" 
+        />
         </body>
     </html>
   )
