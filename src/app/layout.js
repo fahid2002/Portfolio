@@ -1,5 +1,6 @@
 import { DM_Sans, Press_Start_2P, Bebas_Neue } from 'next/font/google'
 import './globals.css'
+import Preloader from '@/components/Preloader'
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
@@ -44,7 +45,10 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${dmSans.variable} ${pressStart2P.variable} ${bebasNeue.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Preloader />
+        {children}
+        </body>
     </html>
   )
 }

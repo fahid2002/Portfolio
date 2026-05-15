@@ -62,7 +62,7 @@ function ProjectCard({ project, i, onOpenMedia }) {
       {/* Body */}
       <div className="p-5 flex flex-col flex-grow">
         <h3 className="font-display text-[1.4rem] text-cream mb-1">{project.name}</h3>
-        <p className="font-pixel text-[0.33rem] text-red tracking-widest mb-3 leading-[1.9]">
+        <p className="font-pixel text-[0.35rem] text-red tracking-widest mb-3 leading-[1.9]">
           {project.stack}
         </p>
         <p className="text-op-text text-[0.82rem] leading-[1.65] mb-4">{project.desc}</p>

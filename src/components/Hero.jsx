@@ -98,10 +98,11 @@ export default function Hero() {
         </div>
 
         {/* Location badge */}
-        <div className="flex items-center gap-2">
-          <span>🗺</span>
-          <span className="font-pixel text-[0.3rem] text-op-dim tracking-[0.12em]">
-            {personal.location} 🇧🇩
+        <div className="flex items-center gap-2 text-[0.5rem]">
+          <span className='text-[1rem]'>🗺</span>
+          <span className="font-pixel  text-op-dim tracking-[0.12em]">
+            {personal.location} 
+            <span className="text-[0.6rem]">🇧🇩</span>
           </span>
         </div>
       </div>

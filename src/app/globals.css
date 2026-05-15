@@ -249,7 +249,7 @@ body::before {
   padding: 0 10px;
   letter-spacing: 0.25em;
 }
-.wanted-poster::after {
+/* .wanted-poster::after {
   content: '— DEAD OR ALIVE —';
   position: absolute; bottom: -13px; left: 50%; transform: translateX(-50%);
   font-family: var(--font-pixel), monospace;
@@ -259,7 +259,7 @@ body::before {
   padding: 0 8px;
   white-space: nowrap;
   letter-spacing: 0.15em;
-}
+} */
 .wanted-img-area {
   width: 100%;
   aspect-ratio: 3 / 4;
