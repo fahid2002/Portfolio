@@ -29,8 +29,8 @@ export default function Skills() {
       <div className="flex flex-col md:flex-row gap-10 md:gap-14">
 
         {/* Sidebar nav */}
-        <aside className="md:w-[180px] flex-shrink-0 md:sticky md:top-28 self-start">
-          <ul className="list-none flex flex-row md:flex-col overflow-x-auto md:overflow-visible gap-0 pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <aside className="w-full overflow-hidden md:w-[180px] flex-shrink-0 md:sticky md:top-28 self-start md:overflow-visible">
+          <ul className="w-full list-none flex flex-row flex-nowrap md:flex-col overflow-x-auto md:overflow-visible gap-0 pb-2 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {skillGroups.map(g => (
               <li key={g.id} className="shrink-0">
                 <button
