@@ -3,6 +3,8 @@ import './globals.css'
 import Preloader from '@/components/Preloader'
 import Script from 'next/script'
 
+
+
 const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-body',
@@ -37,6 +39,9 @@ export const metadata = {
     title: 'Fahid Hasan - MERN Stack Developer & Designer',
     description: 'Portfolio of Fahid Hasan Khan - MERN Stack Developer & Designer from Dhaka, Bangladesh.',
     type: 'website',
+  },
+  icons: {
+    icon: "image/favicon.svg",
   },
 }
 
